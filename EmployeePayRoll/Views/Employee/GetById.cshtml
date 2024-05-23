@@ -1,0 +1,68 @@
+﻿@model ModelLayer.Employeemodel.RegisterModel
+
+@{
+    ViewData["Title"] = "GetById";
+}
+
+<h1>GetById</h1>
+
+<div>
+    <h4>RegisterModel</h4>
+    <hr />
+    @* <div class="row d-flex justify-content-center"> *@
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.EMPLOYEEID)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.EMPLOYEEID)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.EMPLOYEENAME)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.EMPLOYEENAME)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.PROFILEIMAGE)
+        </dt>
+        <dd class = "col-sm-10">
+           <img src=" @Html.DisplayFor(model => model.PROFILEIMAGE)" alt="image not found" />
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.GENDER)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.GENDER)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.DEPARTMENT)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.DEPARTMENT)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.SALARY)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.SALARY)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.StartDate)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.StartDate)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Notes)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Notes)
+        </dd>
+    </dl>
+    </div>
+@* </div> *@
+<div>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.EMPLOYEEID }) |
+    <a asp-action="Index">Back to List</a>
+</div>
